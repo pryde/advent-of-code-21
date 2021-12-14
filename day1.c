@@ -2,8 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-int* reset_measurements(int* measurements);
-
 char* read_file(char *file_name) {
   FILE *input = fopen(file_name, "r");
   char *input_data;
@@ -86,14 +84,6 @@ int part_two() {
   }
 
   return increase_count;
-}
-
-int* reset_measurements(int* measurements) {
-  measurements[0] = measurements[1];
-  measurements[1] = measurements[2];
-  measurements[2] = 0;
-
-  return measurements;
 }
 
 int main() {
